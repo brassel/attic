@@ -239,7 +239,7 @@ async fn find_pin_protected_object_ids(
         }
     };
 
-    let rows = db.query_all(&statement).await?;
+    let rows = db.query_all_raw(statement).await?;
     let mut ids = HashSet::with_capacity(rows.len());
     for row in rows {
         ids.insert(row.try_get::<i64>("", "id")?);
