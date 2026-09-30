@@ -18,6 +18,7 @@ mod m20260508_000001_add_chunk_state_holders_index;
 mod m20260611_000001_add_nar_state_holders_index;
 mod m20260624_000001_remove_chunk_recovery;
 mod m20260904_000001_add_realisation_table;
+mod m20260930_000001_create_pin_table;
 
 pub struct Migrator;
 
@@ -41,6 +42,7 @@ impl MigratorTrait for Migrator {
             Box::new(m20260611_000001_add_nar_state_holders_index::Migration),
             Box::new(m20260624_000001_remove_chunk_recovery::Migration),
             Box::new(m20260904_000001_add_realisation_table::Migration),
+            Box::new(m20260930_000001_create_pin_table::Migration),
         ]
     }
 }

@@ -7,6 +7,7 @@ pub mod chunk;
 pub mod chunkref;
 pub mod nar;
 pub mod object;
+pub mod pin;
 pub mod realisation;
 
 use sea_orm::entity::Value;
